@@ -9,14 +9,16 @@ export const plants = [
         toxic: true, 
         sunlight: 'Part Sun',
         price: '12.00'
-    }]
-
-//     {
-//         name:
-//         type:
-//         color:
-//         careLevel:
-//         toxic:
-//         sunlight:
-//     }
-// 
+    },
+    {
+        id: '2',
+        name: 'Spider Plant',
+        img: './assets/Spider_Plant.jpeg',
+        type: 'Herbacious, Perennial',
+        color: 'Green & Yellow',
+        careLevel: 'Easy',
+        toxic: false,
+        sunlight: 'Part Sun, Part Shade',
+        price: '10.00'
+    }
+]
