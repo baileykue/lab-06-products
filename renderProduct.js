@@ -6,7 +6,7 @@ export function renderPlant(plant){
     plantHeader.textContent = plant.name;
 
     let addButton = document.createElement('button');
-    addButton.textContent = 'Add To Cart'
+    addButton.textContent = 'Add To Cart';
     addButton.setAttribute('id', plant.id);
     
     const img = document.createElement('img');
