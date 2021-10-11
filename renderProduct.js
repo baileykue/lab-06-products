@@ -9,9 +9,6 @@ export function renderPlant(plant){
     addButton.textContent = 'Add To Cart'
     addButton.setAttribute('id', plant.id);
     
-    // addButton.getElementById(plant.id)
-    // addButton.idList
-    
     const img = document.createElement('img');
     img.src = plant.img;
     

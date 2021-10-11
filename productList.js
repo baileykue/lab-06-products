@@ -55,3 +55,4 @@ export const plants = [
         price: '15.00'
     }
 ]
+
