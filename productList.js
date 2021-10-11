@@ -54,5 +54,5 @@ export const plants = [
         sunlight: 'Part Sun, Part Shade',
         price: '15.00'
     }
-]
+];
 
