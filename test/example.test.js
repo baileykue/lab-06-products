@@ -47,8 +47,8 @@ test('renderLineItems should return tdName, tdQty, tdPrice, tdTotal', (expect)=>
 })
 
 
-// test('calcOrderTotal should return the total sum of individual item totals', (expect)=>{
-//     const expected = {
+test('calcOrderTotal should return the total sum of individual item totals', (expect)=>{
+     const expected = ;
 
-//     }
-// })
+     const 
+ })

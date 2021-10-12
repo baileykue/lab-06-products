@@ -10,6 +10,7 @@ export function findById(id, items){
 export function calcOrderTotal(cart, products){
     const orderTotal = 0;
     for (let product of products) {
-        
+        ;
+
     }
 }
