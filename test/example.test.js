@@ -8,9 +8,10 @@ import { cart } from '../data/cart-data.js';
 
 const test = QUnit.test;
 
-test('function should return a div, h2, button, and img', (expect) => {
+test('function should return a div, h2, button, p tags, and img', (expect) => {
    
-    const expected = '<div class="plant-list"><h2>Croton</h2><img src="./assets/Croton.jpeg"><button id="3">Add To Cart</button></div>';
+    const expected = `<div class="plant-list"><h2>Croton</h2><img src="./assets/Croton.jpeg"><p>This plant is a Evergreen Shrub, prefers Part Sun. 
+    Grows in beautiful shades of Green, Yellow, &amp; Pink and has a care level of Moderate.</p><p>$ 13.00</p><button id="3">Add To Cart</button></div>`;
     const croton = plants[2];
 
     const actual = renderPlant(croton).outerHTML;
@@ -30,13 +31,13 @@ test('findById should return the item matching the ID', (expect)=>{
         toxic: false,
         sunlight: 'Part Sun, Part Shade',
         price: 15.00
-    }
+    };
     const actual = findById('5', plants);
     expect.deepEqual(actual, expected);
-})
+});
 
 test('renderLineItems should return tdName, tdQty, tdPrice, tdTotal', (expect)=>{
-    const expected = '<tr><td>Staghorn Fern</td><td>15</td><td>1</td><td>15</td></tr>';
+    const expected = '<tr><td>Staghorn Fern</td><td>$ 15.00</td><td>1</td><td>$ 15.00</td></tr>';
 
     const staghornFern = cart[2];
 
@@ -44,11 +45,13 @@ test('renderLineItems should return tdName, tdQty, tdPrice, tdTotal', (expect)=>
 
     expect.equal(actual, expected);
     
-})
+});
 
 
 test('calcOrderTotal should return the total sum of individual item totals', (expect)=>{
-     const expected = ;
+    const expected = 91;
 
-     const 
- })
+    const actual = calcOrderTotal(cart, plants);
+
+    expect.equal(actual, expected);
+});

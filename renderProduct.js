@@ -10,7 +10,7 @@ export function renderPlant(plant){
     Grows in beautiful shades of ${plant.color} and has a care level of ${plant.careLevel}.`;
 
     const plantPrice = document.createElement('p');
-    plantPrice.textContent = `$${plant.price}.00`;
+    plantPrice.textContent = `$ ${plant.price}.00`;
 
     let addButton = document.createElement('button');
     addButton.textContent = 'Add To Cart';
