@@ -1,5 +1,5 @@
 import { renderPlant } from './renderProduct.js';
-import { plants } from './productList.js';
+import { plants } from './data/productList.js';
 
 const productList = document.getElementById('product-list');
 
