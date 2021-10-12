@@ -15,7 +15,7 @@ for (let cartItem of cart){
     const tdQty = document.createElement('td');
     tdQty.textContent = plantData.qty;
     const tdTotal = document.createElement('td');
-    tdTotal.textContent = cartItem.qty + plantData.price;
+    tdTotal.textContent = cartItem.qty * plantData.price;
     tr.append(tdName, tdPrice, tdQty, tdTotal);
     tbody.appendChild(tr);
 }

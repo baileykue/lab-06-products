@@ -8,7 +8,7 @@ export const plants = [
         careLevel: 'Easy',
         toxic: true, 
         sunlight: 'Part Sun',
-        price: '12.00'
+        price: 12.00
     },
     {
         id: '2',
@@ -19,7 +19,7 @@ export const plants = [
         careLevel: 'Easy',
         toxic: false,
         sunlight: 'Part Sun, Part Shade',
-        price: '10.00'
+        price: 10.00
     }, 
     {
         id: '3',
@@ -30,7 +30,7 @@ export const plants = [
         careLevel: 'Moderate',
         toxic: true,
         sunlight: 'Part Sun',
-        price: '13.00'
+        price: 13.00
     }, 
     {
         id: '4',
@@ -41,7 +41,7 @@ export const plants = [
         careLevel: 'Easy',
         toxic: true,
         sunlight: 'Part Sun, Full Sun',
-        price: '8.00'
+        price: 8.00
     }, 
     {
         id: '5',
@@ -52,7 +52,7 @@ export const plants = [
         careLevel: 'Easy',
         toxic: false,
         sunlight: 'Part Sun, Part Shade',
-        price: '15.00'
+        price: 15.00
     }
 ];
 
