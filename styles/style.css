@@ -6,6 +6,9 @@ body {
 	animation: gradient 15s ease infinite;
 	height: 100vh;
     color: #183528;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @keyframes gradient {
@@ -61,4 +64,18 @@ button:hover {
 .plant-list img {
     width: 100%;
     border-radius: 25px;
+}
+
+table {
+    border: 2px solid black;
+
+}
+
+thead {
+    background-color: #AAFCB8;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #77AF9C;
 }
