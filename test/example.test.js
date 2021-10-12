@@ -2,7 +2,9 @@
 import { renderPlant } from '../renderProduct.js';
 import { plants } from '../data/productList.js';
 import { findById } from '../utils.js';
+import { renderLineItems } from '../cart/renderLineItems.js';
 import { calcOrderTotal } from '../utils.js';
+import { cart } from '../data/cart-data.js';
 
 const test = QUnit.test;
 
@@ -33,8 +35,20 @@ test('findById should return the item matching the ID', (expect)=>{
     expect.deepEqual(actual, expected);
 })
 
-test('calcOrderTotal should return the total sum of individual item totals', (expect)=>{
-    const expected = {
+test('renderLineItems should return tdName, tdQty, tdPrice, tdTotal', (expect)=>{
+    const expected = '<tr><td>Staghorn Fern</td><td>15</td><td>1</td><td>15</td></tr>';
 
-    }
+    const staghornFern = cart[2];
+
+    const actual = renderLineItems(staghornFern).outerHTML;
+
+    expect.equal(actual, expected);
+    
 })
+
+
+// test('calcOrderTotal should return the total sum of individual item totals', (expect)=>{
+//     const expected = {
+
+//     }
+// })
