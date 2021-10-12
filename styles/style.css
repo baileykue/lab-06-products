@@ -66,6 +66,10 @@ button:hover {
     border-radius: 25px;
 }
 
+h2, h1 {
+    text-shadow: 2px 2px grey;
+}
+
 table {
     border: 6px double black;
     border-radius: 25px;
@@ -86,3 +90,5 @@ td {
 th, td {
     border-bottom: 1px solid #ddd;
   }
+
+  
