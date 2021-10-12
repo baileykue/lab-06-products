@@ -1,5 +1,6 @@
 import { plants } from '../data/productList.js';
 import { findById } from '../utils.js';
+import { toUSD } from '../utils.js';
 
 
 export function renderLineItems(cartItem){
@@ -10,13 +11,13 @@ export function renderLineItems(cartItem){
     tdName.textContent = plantData.name;
 
     const tdPrice = document.createElement('td');
-    tdPrice.textContent = `$ ${plantData.price}.00`;
+    tdPrice.textContent = toUSD(plantData.price);
 
     const tdQty = document.createElement('td');
     tdQty.textContent = cartItem.qty;
 
     const tdTotal = document.createElement('td');
-    tdTotal.textContent = `$ ${cartItem.qty * plantData.price}.00`;
+    tdTotal.textContent = toUSD(cartItem.qty * plantData.price);
 
 
     tr.append(tdName, tdPrice, tdQty, tdTotal);

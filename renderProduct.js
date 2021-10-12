@@ -1,3 +1,5 @@
+import { toUSD } from './utils.js';
+
 export function renderPlant(plant){
     const plantList = document.createElement('div');
     plantList.classList.add('plant-list');
@@ -10,7 +12,7 @@ export function renderPlant(plant){
     Grows in beautiful shades of ${plant.color} and has a care level of ${plant.careLevel}.`;
 
     const plantPrice = document.createElement('p');
-    plantPrice.textContent = `$ ${plant.price}.00`;
+    plantPrice.textContent = toUSD(plant.price);
 
     let addButton = document.createElement('button');
     addButton.textContent = 'Add To Cart';
