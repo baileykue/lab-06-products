@@ -2,7 +2,7 @@ import { cart } from '../data/cart-data.js';
 import { renderLineItems } from './renderLineItems.js';
 import { plants } from '../data/productList.js';
 import { calcOrderTotal } from '../utils.js';
-// import { toUSD } from '../utils.js';
+import { toUSD } from '../utils.js';
 
 
 const tbody = document.getElementById('table-body');
@@ -17,5 +17,5 @@ const orderTotal = calcOrderTotal(cart, plants);
 
 const tdOrderTotal = document.getElementById('order-total');
 
-tdOrderTotal.textContent = orderTotal;
+tdOrderTotal.textContent = toUSD(orderTotal);
 

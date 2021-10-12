@@ -16,6 +16,6 @@ export function calcOrderTotal(cart, plants){
     return orderTotal;
 }
 
-// export function toUSD(number){
-//     return number.toLocaleString('en-us', { style: 'curreny', currency: 'USD' });
-// }
+export function toUSD(number){
+    return number.toLocaleString('en-us', { style: 'currency', currency: 'USD' });
+}
