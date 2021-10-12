@@ -3,6 +3,7 @@ import { cart } from '../data/cart-data.js';
 import { findById } from '../utils.js';
 
 const tbody = document.getElementById('table-body');
+const tfoot = document.getElementById('table-foot')
 
 for (let cartItem of cart){
     const plantData = findById(cartItem.id, plants);
@@ -18,4 +19,6 @@ for (let cartItem of cart){
     tdTotal.textContent = cartItem.qty * plantData.price;
     tr.append(tdName, tdPrice, tdQty, tdTotal);
     tbody.appendChild(tr);
+    
 }
+

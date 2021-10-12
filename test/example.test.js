@@ -2,6 +2,7 @@
 import { renderPlant } from '../renderProduct.js';
 import { plants } from '../data/productList.js';
 import { findById } from '../utils.js';
+import { calcOrderTotal } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -26,8 +27,14 @@ test('findById should return the item matching the ID', (expect)=>{
         careLevel: 'Easy',
         toxic: false,
         sunlight: 'Part Sun, Part Shade',
-        price: '15.00'
+        price: 15.00
     }
     const actual = findById('5', plants);
     expect.deepEqual(actual, expected);
+})
+
+test('calcOrderTotal should return the total sum of individual item totals', (expect)=>{
+    const expected = {
+
+    }
 })
