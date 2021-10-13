@@ -1,4 +1,3 @@
-// import { cart } from '../data/cart-data.js';
 import { renderLineItems } from './renderLineItems.js';
 import { plants } from '../data/productList.js';
 import { calcOrderTotal, getCart, removeCart } from '../utils.js';

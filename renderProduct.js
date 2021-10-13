@@ -23,7 +23,6 @@ export function renderPlant(plant){
     addButton.setAttribute('class', 'add-button');
 
     const plantQty = document.createElement('p');
-    console.log(foundItem);
     if (foundItem) { plantQty.textContent = `Qty: ${foundItem.qty}`;}
     else { plantQty.classList.add('hidden'); }
     
