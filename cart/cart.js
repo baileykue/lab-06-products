@@ -1,7 +1,7 @@
 // import { cart } from '../data/cart-data.js';
 import { renderLineItems } from './renderLineItems.js';
 import { plants } from '../data/productList.js';
-import { calcOrderTotal, getCart } from '../utils.js';
+import { calcOrderTotal, getCart, removeCart } from '../utils.js';
 import { toUSD } from '../utils.js';
 
 const cart = getCart();
@@ -21,8 +21,8 @@ const tdOrderTotal = document.getElementById('order-total');
 tdOrderTotal.textContent = toUSD(orderTotal);
 
 const orderButton = document.getElementById('place-order');
+
 orderButton.addEventListener('click', ()=>{
-    localStorage.removeItem('CART');
-    window.location.replace('..');
+    return removeCart();
 });
 

@@ -14,14 +14,18 @@ export function renderPlant(plant){
     const plantPrice = document.createElement('p');
     plantPrice.textContent = toUSD(plant.price);
 
-    let addButton = document.createElement('button');
+    const addButton = document.createElement('button');
     addButton.textContent = 'Add To Cart';
     addButton.setAttribute('id', plant.id);
     addButton.setAttribute('class', 'add-button');
+
+    const plantQty = document.createElement('p');
+    plantQty.classList.add('hidden');
+    plantQty.textContent = 'Qty:';
     
     const img = document.createElement('img');
     img.src = plant.img;
     
-    plantList.append(plantHeader, img, plantDesc, plantPrice, addButton);
+    plantList.append(plantHeader, img, plantDesc, plantPrice, plantQty, addButton);
     return plantList;
 }

@@ -37,7 +37,11 @@ export function addItem(id){
     }
     const stringCart = JSON.stringify(cart);
     localStorage.setItem('CART', stringCart);
+    return cartItem.qty;
 }
 
 
-// removeCart
+export function removeCart(){
+    localStorage.removeItem('CART');
+    window.location.replace('..');
+}
