@@ -10,7 +10,7 @@ const test = QUnit.test;
 test('function should return a div, h2, button, p tags, and img', (expect) => {
    
     const expected = `<div class="plant-list"><h2>Croton</h2><img src="./assets/Croton.jpeg"><p>This plant is a Evergreen Shrub, prefers Part Sun. 
-    Grows in beautiful shades of Green, Yellow, &amp; Pink and has a care level of Moderate.</p><p>$13.00</p><button id="3">Add To Cart</button></div>`;
+    Grows in beautiful shades of Green, Yellow, &amp; Pink and has a care level of Moderate.</p><p>$13.00</p><p class="hidden"></p><button id="3" class="add-button">Add To Cart</button></div>`;
     const croton = plants[2];
 
     const actual = renderPlant(croton).outerHTML;
@@ -104,3 +104,4 @@ test('addItem should add an item if its not alreay there', (expect)=>{
     expect.deepEqual(cart, expected);
 });
 
+test('')
