@@ -20,3 +20,9 @@ const tdOrderTotal = document.getElementById('order-total');
 
 tdOrderTotal.textContent = toUSD(orderTotal);
 
+const orderButton = document.getElementById('place-order');
+orderButton.addEventListener('click', ()=>{
+    localStorage.removeItem('CART');
+    window.location.replace('..');
+});
+
