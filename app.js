@@ -1,6 +1,6 @@
 import { renderPlant } from './renderProduct.js';
 import { plants } from './data/productList.js';
-import { addItem, getCart } from './utils.js';
+import { addItem, findById } from './utils.js';
 
 
 
@@ -14,16 +14,16 @@ for (let plant of plants){
 const addButtons = document.querySelectorAll('.add-button');
 const plantQtys = document.getElementsByClassName('hidden');
 
-for (let addButton of addButtons){
-    addButton.addEventListener('click', ()=>{
-        addItem(addButton.id);
-        alert('Item has been added to your cart!');
+// for (let addButton of addButtons){
+//     addButton.addEventListener('click', ()=>{
+//         // addItem(addButton.id);
+//         // alert('Item has been added to your cart!');
         
-        for (let plantQty of plantQtys){
-            plantQty.classList.remove('hidden');
-            //plantQty.textContent = .qty;
+//         // for (let plantQty of plantQtys){
+//         //     plantQty.classList.remove('hidden');
+//         //     //plantQty.textContent = 
 
-        }
+//         // }
 
-    });
-}
+//     });
+// }

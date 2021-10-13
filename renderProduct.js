@@ -1,4 +1,4 @@
-import { toUSD } from './utils.js';
+import { toUSD, addItem } from './utils.js';
 
 export function renderPlant(plant){
     const plantList = document.createElement('div');
@@ -21,8 +21,15 @@ export function renderPlant(plant){
 
     const plantQty = document.createElement('p');
     plantQty.classList.add('hidden');
-    plantQty.textContent = 'Qty:';
     
+    addButton.addEventListener('click', ()=>{
+        const qtyTotal = addItem(addButton.id);
+        alert('Item has been added to your cart!');
+        
+        plantQty.classList.remove('hidden');
+        plantQty.textContent = `Qty: ${qtyTotal}`;
+    });
+
     const img = document.createElement('img');
     img.src = plant.img;
     
