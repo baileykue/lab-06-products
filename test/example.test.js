@@ -1,9 +1,8 @@
 // IMPORT MODULES under test here:
 import { renderPlant } from '../renderProduct.js';
 import { plants } from '../data/productList.js';
-import { findById } from '../utils.js';
+import { findById, calcOrderTotal, getCart } from '../utils.js';
 import { renderLineItems } from '../cart/renderLineItems.js';
-import { calcOrderTotal } from '../utils.js';
 import { cart } from '../data/cart-data.js';
 
 const test = QUnit.test;
@@ -55,3 +54,18 @@ test('calcOrderTotal should return the total sum of individual item totals', (ex
 
     expect.equal(actual, expected);
 });
+
+test('getCart should return the cart if it exists', (expect)=>{
+    const fakeCart = [
+        { id: '2', qty: 3 },
+        { id: '4', qty: 2 }
+    ];
+
+    localStorage.setItem('CART', JSON.stringify(fakeCart));
+
+    const cart = getCart();
+
+    expect.deepEqual(cart, fakeCart);
+});
+
+test('getCart should return an empty array')
