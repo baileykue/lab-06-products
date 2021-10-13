@@ -17,6 +17,7 @@ export function renderPlant(plant){
     let addButton = document.createElement('button');
     addButton.textContent = 'Add To Cart';
     addButton.setAttribute('id', plant.id);
+    addButton.setAttribute('class', 'add-button');
     
     const img = document.createElement('img');
     img.src = plant.img;

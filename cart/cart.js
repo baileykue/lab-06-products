@@ -1,9 +1,10 @@
-import { cart } from '../data/cart-data.js';
+// import { cart } from '../data/cart-data.js';
 import { renderLineItems } from './renderLineItems.js';
 import { plants } from '../data/productList.js';
-import { calcOrderTotal } from '../utils.js';
+import { calcOrderTotal, getCart } from '../utils.js';
 import { toUSD } from '../utils.js';
 
+const cart = getCart();
 
 const tbody = document.getElementById('table-body');
 // const tfoot = document.getElementById('table-foot');
