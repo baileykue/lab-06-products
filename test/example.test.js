@@ -37,7 +37,6 @@ test('findById should return the item matching the ID', (expect)=>{
 test('renderLineItems should return tdName, tdQty, tdPrice, tdTotal', (expect)=>{
     const fakeCart = [{ id: '5', qty: 1 }];
     
-    
     const expected = '<tr><td>Staghorn Fern</td><td>$15.00</td><td>1</td><td>$15.00</td></tr>';
 
     const staghornFern = fakeCart[0];
