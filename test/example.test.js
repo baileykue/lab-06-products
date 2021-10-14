@@ -1,9 +1,8 @@
 // IMPORT MODULES under test here:
 import { renderPlant } from '../renderProduct.js';
 import { plants } from '../data/productList.js';
-import { findById, calcOrderTotal, getCart, addItem } from '../utils.js';
+import { findById, calcOrderTotal, getCart, addItem, removeCart } from '../utils.js';
 import { renderLineItems } from '../cart/renderLineItems.js';
-import { cart } from '../data/cart-data.js';
 
 const test = QUnit.test;
 
@@ -36,9 +35,12 @@ test('findById should return the item matching the ID', (expect)=>{
 });
 
 test('renderLineItems should return tdName, tdQty, tdPrice, tdTotal', (expect)=>{
+    const fakeCart = [{ id: '5', qty: 1 }];
+    
+    
     const expected = '<tr><td>Staghorn Fern</td><td>$15.00</td><td>1</td><td>$15.00</td></tr>';
 
-    const staghornFern = cart[2];
+    const staghornFern = fakeCart[0];
 
     const actual = renderLineItems(staghornFern).outerHTML;
 
@@ -48,9 +50,14 @@ test('renderLineItems should return tdName, tdQty, tdPrice, tdTotal', (expect)=>
 
 
 test('calcOrderTotal should return the total sum of individual item totals', (expect)=>{
-    const expected = 91;
+    const fakeCart = [
+        { id: '2', qty: 1 },
+        { id: '4', qty: 1 }
+    ];
+    
+    const expected = 18;
 
-    const actual = calcOrderTotal(cart, plants);
+    const actual = calcOrderTotal(fakeCart, plants);
 
     expect.equal(actual, expected);
 });
@@ -104,4 +111,15 @@ test('addItem should add an item if its not alreay there', (expect)=>{
     expect.deepEqual(cart, expected);
 });
 
-test('')
+test('clearCart should completely empty cart and reset both pages', (expect)=>{
+    const cart = getCart();
+    
+    addItem('3');
+
+    removeCart();
+
+    const expected = [];
+
+    expect.deepEqual(cart, expected);
+
+});
