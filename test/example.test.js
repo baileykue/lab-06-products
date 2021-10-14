@@ -110,12 +110,12 @@ test('addItem should add an item if its not alreay there', (expect)=>{
     expect.deepEqual(cart, expected);
 });
 
-test('clearCart should completely empty cart and reset both pages', (expect)=>{
-    const cart = getCart();
-    
+test('removeCart should completely empty cart and reset both pages', (expect)=>{
     addItem('3');
-
+    
     removeCart();
+    
+    const cart = getCart();
 
     const expected = [];
 
