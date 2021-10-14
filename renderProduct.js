@@ -1,6 +1,9 @@
-import { toUSD } from './utils.js';
+import { toUSD, addItem, getCart, findById } from './utils.js';
 
 export function renderPlant(plant){
+    const cart = getCart();
+    const foundItem = findById(plant.id, cart);
+
     const plantList = document.createElement('div');
     plantList.classList.add('plant-list');
     
@@ -14,13 +17,25 @@ export function renderPlant(plant){
     const plantPrice = document.createElement('p');
     plantPrice.textContent = toUSD(plant.price);
 
-    let addButton = document.createElement('button');
+    const addButton = document.createElement('button');
     addButton.textContent = 'Add To Cart';
     addButton.setAttribute('id', plant.id);
+    addButton.setAttribute('class', 'add-button');
+
+    const plantQty = document.createElement('p');
+    if (foundItem) { plantQty.textContent = `Qty: ${foundItem.qty}`;}
+    else { plantQty.classList.add('hidden'); }
     
+    addButton.addEventListener('click', ()=>{
+        const qtyTotal = addItem(addButton.id);
+        alert('Item has been added to your cart!');
+        plantQty.classList.remove('hidden');
+        plantQty.textContent = `Qty: ${qtyTotal}`;
+    });
+
     const img = document.createElement('img');
     img.src = plant.img;
     
-    plantList.append(plantHeader, img, plantDesc, plantPrice, addButton);
+    plantList.append(plantHeader, img, plantDesc, plantPrice, plantQty, addButton);
     return plantList;
 }

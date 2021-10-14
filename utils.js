@@ -19,3 +19,31 @@ export function calcOrderTotal(cart, plants){
 export function toUSD(number){
     return number.toLocaleString('en-us', { style: 'currency', currency: 'USD' });
 }
+
+export function getCart(){
+    const cartString = localStorage.getItem('CART') || '[]';
+    const cart = JSON.parse(cartString);
+    return cart;
+}
+
+export function addItem(id){
+    const cart = getCart();
+    let newItem;
+    const cartItem = findById(id, cart);
+    if (cartItem){
+        cartItem.qty++;
+    } else {
+        newItem = { id: id, qty: 1 };
+        cart.push(newItem);
+    }
+    const stringCart = JSON.stringify(cart);
+    localStorage.setItem('CART', stringCart);
+    if (newItem) {
+        return newItem.qty;
+    } else { return cartItem.qty; }
+}
+
+
+export function removeCart(){
+    return localStorage.removeItem('CART');
+}

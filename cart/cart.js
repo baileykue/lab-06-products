@@ -1,9 +1,9 @@
-import { cart } from '../data/cart-data.js';
 import { renderLineItems } from './renderLineItems.js';
 import { plants } from '../data/productList.js';
-import { calcOrderTotal } from '../utils.js';
+import { calcOrderTotal, getCart, removeCart } from '../utils.js';
 import { toUSD } from '../utils.js';
 
+const cart = getCart();
 
 const tbody = document.getElementById('table-body');
 // const tfoot = document.getElementById('table-foot');
@@ -18,4 +18,11 @@ const orderTotal = calcOrderTotal(cart, plants);
 const tdOrderTotal = document.getElementById('order-total');
 
 tdOrderTotal.textContent = toUSD(orderTotal);
+
+const orderButton = document.getElementById('place-order');
+
+orderButton.addEventListener('click', ()=>{
+    removeCart();
+    window.location.replace('..');
+});
 

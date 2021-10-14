@@ -19,7 +19,6 @@ export function renderLineItems(cartItem){
     const tdTotal = document.createElement('td');
     tdTotal.textContent = toUSD(cartItem.qty * plantData.price);
 
-
     tr.append(tdName, tdPrice, tdQty, tdTotal);
     return tr;
 }
