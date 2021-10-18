@@ -12,6 +12,8 @@
 </head>
 <body>
     <h1>Admin Page</h1>
+    <a href="../">Back to HomePage</a>
+    <a href="../cart/index.html">Back to your cart</a>
     <form id="product-form">
         <label for="id">
             ID
@@ -33,12 +35,18 @@
             Color
             <input type="text" name="color" id="color">
         </label>
+        <label for="price">
+            Price
+            <input type="number" name="price" id="price">
+        </label>
         <label for="sunlight">
             Sunlight
-            <input type="text" name="sunlight" id="sunlight">
-        </label>
-        <label for="price">
-            <input type="text" name="price" id="price">
+            <select name="sunlight" id="sunlight">
+                <option value="full-sun">Full Sun</option>
+                <option value="part-sun">Part Sun</option>
+                <option value="full-shade">Full Shade</option>
+                <option value="part-shade">Part Shade</option>
+            </select>
         </label>
         <label for="careLevel">
             Care Level

@@ -1,3 +1,6 @@
+import { addProducts } from '../utils.js';
+
+
 const form = document.getElementById('product-form');
 
 form.addEventListener('submit', (e) =>{
@@ -10,8 +13,9 @@ form.addEventListener('submit', (e) =>{
         type: data.get('type'),
         color: data.get('color'),
         careLevel: data.get('careLevel'),
-        toxic: data.get('toxic'),
-        sunlight: data,
-        price: 10
-    }
-})
+        sunlight: data.get('sunlight'),
+        price: data.get('price')
+    };
+    addProducts(newPlant);
+    alert('New plant has been added!');
+});
