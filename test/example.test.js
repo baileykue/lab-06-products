@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 import { renderPlant } from '../renderProduct.js';
 import { plants } from '../data/productList.js';
-import { findById, calcOrderTotal, getCart, addItem, removeCart, getProducts, addProduct } from '../utils.js';
+import { findById, calcOrderTotal, getCart, addItem, removeCart, getProducts, addProducts } from '../utils.js';
 import { renderLineItems } from '../cart/renderLineItems.js';
 
 const test = QUnit.test;
@@ -26,7 +26,6 @@ test('findById should return the item matching the ID', (expect)=>{
         type: 'Fern',
         color: 'Green & Yellow',
         careLevel: 'Easy',
-        toxic: false,
         sunlight: 'Part Sun, Part Shade',
         price: 15.00
     };
@@ -123,14 +122,20 @@ test('removeCart should completely empty cart and reset both pages', (expect)=>{
 
 });
 
-test('addProduct should add a product to the products array' (expect)=>{
+test('addProduct should add a product to the products array', (expect)=>{
     let products = getProducts();
     const newProduct = {
         id: 6,
-        name: 'succulent'
+        name: 'Succulent',
+        img: '../assets/Succulent.jpeg',
+        type: 'Succulent',
+        color: 'Dark Green',
+        careLevel: 'Easy',
+        sunlight: 'Full Sun',
+        price: 5
     };
 
-    addProduct(newProduct);
+    addProducts(newProduct);
 
     products = getProducts();
     expect.equal(products.length, 6);
