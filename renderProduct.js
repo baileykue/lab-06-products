@@ -41,3 +41,4 @@ export function renderPlant(plant){
     plantList.append(plantHeader, img, plantDesc, plantPrice, plantQty, addButton);
     return plantList;
 }
+

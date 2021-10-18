@@ -67,3 +67,10 @@ export function addProducts(newPlant){
     let productString = JSON.stringify(products);
     localStorage.setItem('PRODUCTS', productString);
 }
+
+export function removeProducts(oldPlant){
+    let oldProducts = findById();
+    oldProducts.splice(oldPlant);
+    let oldProductString = JSON.stringify(oldProducts);
+    localStorage.removeItem('PRODUCTS', oldProductString);
+}

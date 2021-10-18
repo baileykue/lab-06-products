@@ -140,4 +140,8 @@ test('addProduct should add a product to the products array', (expect)=>{
     products = getProducts();
     expect.equal(products.length, 6);
 
-})
+});
+
+// test('removeProducts should remove a product from the array', (expect)=>{
+//     let oldProduct
+// })
