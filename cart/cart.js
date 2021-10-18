@@ -1,9 +1,9 @@
 import { renderLineItems } from './renderLineItems.js';
-import { plants } from '../data/productList.js';
-import { calcOrderTotal, getCart, removeCart } from '../utils.js';
+import { calcOrderTotal, getCart, getProducts, removeCart } from '../utils.js';
 import { toUSD } from '../utils.js';
 
 const cart = getCart();
+const plants = getProducts();
 
 const tbody = document.getElementById('table-body');
 // const tfoot = document.getElementById('table-foot');

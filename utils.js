@@ -51,10 +51,12 @@ export function removeCart(){
 import { plants } from '../data/productList.js';
 
 export function getProducts(){
-    const lsProducts = localStorage.getItem('PRODUCTS');
+    let lsProducts = localStorage.getItem('PRODUCTS');
+    const products = JSON.parse(lsProducts);
 
     if (!lsProducts){
         const plantsString = JSON.stringify(plants);
         localStorage.setItem('PRODUCTS', plantsString);
     }
+    return products || plants;
 }
