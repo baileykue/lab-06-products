@@ -14,8 +14,14 @@ form.addEventListener('submit', (e) =>{
         color: data.get('color'),
         careLevel: data.get('careLevel'),
         sunlight: data.get('sunlight'),
-        price: data.get('price')
+        price: Number(data.get('price'))
     };
     addProducts(newPlant);
     alert('New plant has been added!');
+});
+
+const addButton = document.getElementById('add-button');
+
+addButton.addEventListener('click', ()=>{
+    window.location.reload();
 });
