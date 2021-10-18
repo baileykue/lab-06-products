@@ -47,3 +47,14 @@ export function addItem(id){
 export function removeCart(){
     return localStorage.removeItem('CART');
 }
+
+import { plants } from '../data/productList.js';
+
+export function getProducts(){
+    const lsProducts = localStorage.getItem('PRODUCTS');
+
+    if (!lsProducts){
+        const plantsString = JSON.stringify(plants);
+        localStorage.setItem('PRODUCTS', plantsString);
+    }
+}
