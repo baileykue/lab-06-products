@@ -60,3 +60,10 @@ export function getProducts(){
     }
     return products || plants;
 }
+
+export function addProducts(newPlant){
+    let products = getProducts();
+    products.push(newPlant);
+    let productString = JSON.stringify(products);
+    localStorage.setItem('PRODUCTS', productString);
+}
