@@ -47,3 +47,30 @@ export function addItem(id){
 export function removeCart(){
     return localStorage.removeItem('CART');
 }
+
+import { plants } from '../data/productList.js';
+
+export function getProducts(){
+    let lsProducts = localStorage.getItem('PRODUCTS');
+    const products = JSON.parse(lsProducts);
+
+    if (!lsProducts){
+        const plantsString = JSON.stringify(plants);
+        localStorage.setItem('PRODUCTS', plantsString);
+    }
+    return products || plants;
+}
+
+export function addProducts(newPlant){
+    let products = getProducts();
+    products.push(newPlant);
+    let productString = JSON.stringify(products);
+    localStorage.setItem('PRODUCTS', productString);
+}
+
+export function removeProducts(oldPlant){
+    let oldProducts = findById();
+    oldProducts.splice(oldPlant);
+    let oldProductString = JSON.stringify(oldProducts);
+    localStorage.removeItem('PRODUCTS', oldProductString);
+}

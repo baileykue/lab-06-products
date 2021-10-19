@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet"> 
+    <title>Admin</title>
+</head>
+<body>
+    <h1>Admin Page</h1>
+    <a href="../">Back to HomePage</a>
+    <a href="../cart/index.html">Back to your cart</a>
+    <form id="product-form">
+        <label for="id">
+            ID
+            <input type="text" id="id" name="id">
+        </label>
+        <label for="name">
+            Name
+            <input type="text" name="name" id="name">
+        </label>
+        <label for="img">
+            Image
+            <input type="text" name="img" id="img">
+        </label>
+        <label for="type">
+            Type
+            <input type="text" id="type" name="type">
+        </label>
+        <label for="color">
+            Color
+            <input type="text" name="color" id="color">
+        </label>
+        <label for="price">
+            Price
+            <input type="text" name="price" id="price">
+        </label>
+        <label for="sunlight">
+            Sunlight
+            <select name="sunlight" id="sunlight">
+                <option value="full-sun">Full Sun</option>
+                <option value="part-sun">Part Sun</option>
+                <option value="full-shade">Full Shade</option>
+                <option value="part-shade">Part Shade</option>
+            </select>
+        </label>
+        <label for="careLevel">
+            Care Level
+            <select name="careLevel" id="careLevel">
+                <option value="easy">Easy</option>
+                <option value="moderate">Moderate</option>
+                <option value="difficult">Difficult</option>
+            </select>
+        </label>
+        <button id="add-button">Add Plant To Store</button>
+        <div id="remove-items">
+
+        </div>
+    </form>
+
+    <script type="module" src="./add-products.js"></script>
+</body>
+</html>

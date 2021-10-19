@@ -30,6 +30,8 @@ export function renderPlant(plant){
         const qtyTotal = addItem(addButton.id);
         alert('Item has been added to your cart!');
         plantQty.classList.remove('hidden');
+        // const orderButton = document.getElementById('place-order');
+        // orderButton.classList.remove('hidden');
         plantQty.textContent = `Qty: ${qtyTotal}`;
     });
 
@@ -39,3 +41,4 @@ export function renderPlant(plant){
     plantList.append(plantHeader, img, plantDesc, plantPrice, plantQty, addButton);
     return plantList;
 }
+

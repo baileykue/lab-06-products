@@ -6,7 +6,6 @@ export const plants = [
         type: 'Climbing Evergreen',
         color: 'Light Green',
         careLevel: 'Easy',
-        toxic: true, 
         sunlight: 'Part Sun',
         price: 12
     },
@@ -17,7 +16,6 @@ export const plants = [
         type: 'Herbacious, Perennial',
         color: 'Green & Yellow',
         careLevel: 'Easy',
-        toxic: false,
         sunlight: 'Part Sun, Part Shade',
         price: 10
     }, 
@@ -28,7 +26,6 @@ export const plants = [
         type: 'Evergreen Shrub',
         color: 'Green, Yellow, & Pink',
         careLevel: 'Moderate',
-        toxic: true,
         sunlight: 'Part Sun',
         price: 13
     }, 
@@ -39,7 +36,6 @@ export const plants = [
         type: 'Perrenial Evergreen',
         color: 'Green',
         careLevel: 'Easy',
-        toxic: true,
         sunlight: 'Part Sun, Full Sun',
         price: 8
     }, 
@@ -50,7 +46,6 @@ export const plants = [
         type: 'Fern',
         color: 'Green & Yellow',
         careLevel: 'Easy',
-        toxic: false,
         sunlight: 'Part Sun, Part Shade',
         price: 15
     }

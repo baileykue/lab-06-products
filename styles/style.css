@@ -95,3 +95,28 @@ th, td {
     display: none;
 }
   
+input, select {
+    font-family: 'Megrim', cursive;
+    text-align: center;
+    color: #183528;
+    background-color: transparent;
+    padding: 5px;
+}
+
+input:focus {
+    background-color: #183528;
+    color: #D7FFF1; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 20px;
+}
+
+a {
+    margin: 10px;
+}
