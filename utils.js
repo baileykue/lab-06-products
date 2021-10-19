@@ -48,7 +48,7 @@ export function removeCart(){
     return localStorage.removeItem('CART');
 }
 
-import { plants } from '../data/productList.js';
+import { plants } from './data/productList.js';
 
 export function getProducts(){
     let lsProducts = localStorage.getItem('PRODUCTS');
