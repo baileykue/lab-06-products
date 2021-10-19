@@ -142,6 +142,4 @@ test('addProduct should add a product to the products array', (expect)=>{
 
 });
 
-// test('removeProducts should remove a product from the array', (expect)=>{
-//     let oldProduct
-// })
+//testing qunit one more time
